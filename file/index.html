@@ -1,0 +1,730 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Material Design theme for MkDocs">
+      
+      
+        <link rel="canonical" href="https://squidfunk.github.io/mkdocs-material/file/">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Materi2-DecisionTree - Ely Rosidah</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#decision-tree-pohon-keputusan" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://squidfunk.github.io/mkdocs-material/" title="Ely Rosidah" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Ely Rosidah
+            </span>
+            <span class="md-header-nav__topic">
+              Materi2-DecisionTree
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/ElyRosidah/DataMining-Bismillah-Ely" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    elyrosidah
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Materi1-KNN" class="md-tabs__link md-tabs__link--active">
+        Materi1-KNN
+      </a>
+    
+  </li>
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://squidfunk.github.io/mkdocs-material/" title="Ely Rosidah" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Ely Rosidah
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/ElyRosidah/DataMining-Bismillah-Ely" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    elyrosidah
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../penulis/" title="Penulis" class="md-nav__link">
+      Penulis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Materi1-KNN" class="md-nav__link">
+      Materi1-KNN
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Materi2-DecisionTree
+      </label>
+    
+    <a href="./" title="Materi2-DecisionTree" class="md-nav__link md-nav__link--active">
+      Materi2-DecisionTree
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kelebihan-dan-kekurangan-decision-tree" title="Kelebihan dan Kekurangan Decision Tree" class="md-nav__link">
+    Kelebihan dan Kekurangan Decision Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arsitektur-pohon-keputusan" title="Arsitektur Pohon Keputusan" class="md-nav__link">
+    Arsitektur Pohon Keputusan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-id3" title="Algoritma ID3" class="md-nav__link">
+    Algoritma ID3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-langkah-konstruksi-pohon-keputusan-dengan-algoritma-id3" title="Langkah-Langkah Konstruksi Pohon Keputusan dengan Algoritma ID3" class="md-nav__link">
+    Langkah-Langkah Konstruksi Pohon Keputusan dengan Algoritma ID3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entropy-information-gain" title="Entropy &amp; Information Gain" class="md-nav__link">
+    Entropy &amp; Information Gain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-c45" title="Algoritma  C4.5" class="md-nav__link">
+    Algoritma  C4.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implemetasi-program-menggunakan-data-diabetes" title="Implemetasi Program menggunakan data diabetes" class="md-nav__link">
+    Implemetasi Program menggunakan data diabetes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kelebihan-dan-kekurangan-decision-tree" title="Kelebihan dan Kekurangan Decision Tree" class="md-nav__link">
+    Kelebihan dan Kekurangan Decision Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arsitektur-pohon-keputusan" title="Arsitektur Pohon Keputusan" class="md-nav__link">
+    Arsitektur Pohon Keputusan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-id3" title="Algoritma ID3" class="md-nav__link">
+    Algoritma ID3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-langkah-konstruksi-pohon-keputusan-dengan-algoritma-id3" title="Langkah-Langkah Konstruksi Pohon Keputusan dengan Algoritma ID3" class="md-nav__link">
+    Langkah-Langkah Konstruksi Pohon Keputusan dengan Algoritma ID3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entropy-information-gain" title="Entropy &amp; Information Gain" class="md-nav__link">
+    Entropy &amp; Information Gain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritma-c45" title="Algoritma  C4.5" class="md-nav__link">
+    Algoritma  C4.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implemetasi-program-menggunakan-data-diabetes" title="Implemetasi Program menggunakan data diabetes" class="md-nav__link">
+    Implemetasi Program menggunakan data diabetes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="decision-tree-pohon-keputusan">Decision Tree (Pohon Keputusan)<a class="headerlink" href="#decision-tree-pohon-keputusan" title="Permanent link">&para;</a></h1>
+<p>Pohon keputusan adalah salah satu metode klasifikasi yang paling popular karena mudah untuk diinterpretasi oleh manusia. Konsep dari pohon keputusan adalah mengubah data menjadi pohon keputusan dan aturan-aturan keputusan.</p>
+<p><img alt="" src="../assets/images/konsep_pohon_keputusan.jpg" /></p>
+<h3 id="kelebihan-dan-kekurangan-decision-tree">Kelebihan dan Kekurangan Decision Tree<a class="headerlink" href="#kelebihan-dan-kekurangan-decision-tree" title="Permanent link">&para;</a></h3>
+<p>​   kelebihan :</p>
+<ul>
+<li>
+<p>Daerah pengambilan keputusan yang sebelumnya kompleks dan sangat global, dapat diubah menjadi simple dan spesifik.</p>
+</li>
+<li>
+<p>Eliminasi perhitungan-perhitungan yang tidak diperlukan, karena ketika menggunakan metode
+  pohon keputusan maka contoh diuji hanya berdasarkan kriteria atau kelas-kelas tertentu.</p>
+</li>
+<li>
+<p>Fleksibel untuk memilih fitur dari internal node yang berbeda, fitur yang terpilih akan membedakan suatu kriteria dibandingkan kriteria yang lain dalam node yang sama.</p>
+</li>
+<li>
+<p>Metode pohon keputusan dapat menghindari munculnya permasalahan ini dengan menggunakan kriteria yang jumlahnya lebih sedikit pada setiap node internal tanpa banyak mengurangi kualitas keputusan yang dihasilkan.</p>
+</li>
+</ul>
+<p>Kekurangan :</p>
+<ul>
+<li>
+<p>Terjadi overlap terutama ketika kelas-kelas dan kriteria yang digunakan jumlahnya sangat banyak. Hal tersebut juga dapat menyebabkan meningkatnya waktu pengambilan keputusan dan jumlah memori yang diperlukan</p>
+</li>
+<li>
+<p>Pengakumulasian jumlah eror dari setiap tingkat dalam sebuah pohon keputusan yang besar.</p>
+</li>
+<li>
+<p>Kesulitan dalam mendesain pohon keputusan yang optimal</p>
+</li>
+<li>
+<p>Hasil kualitas keputusan yang didapatkan dari metode pohon keputusan sangat tergantung pada bagaimana pohon tersebut didesain.</p>
+</li>
+</ul>
+<h3 id="arsitektur-pohon-keputusan">Arsitektur Pohon Keputusan<a class="headerlink" href="#arsitektur-pohon-keputusan" title="Permanent link">&para;</a></h3>
+<p>Arsitektur pohon keputusan dibuat menyerupai bentuk pohon, dimana pada umumnya sebuah pohon terdapat akar (root), cabang dan daun (leaf). Pada pohon keputusan juga terdiri  dari tiga bagian sebagai berikut :</p>
+<p>a. <strong>Root node</strong> atau node akar merupakan node yang terletak paling atas dari suatu pohon.</p>
+<p>b. <strong>Internal Node</strong> ini merupakan node percabangan, dimana pada node ini hanya terdapat satu input dan mempunyai minimal dua output.</p>
+<p>c. <strong>Leaf Node</strong> ini merupakan node akhir, hanya memiliki satu input, dan tidak memiliki output. Pada pohon keputusan setiap leaf node menandai label kelas.</p>
+<p>Gambar berikut merupakan bentuk arsitektur pohon keputusan.</p>
+<p><img alt="" src="../assets/images/Arsitektur-Pohon-Keputusan-2.jpg" /></p>
+<h3 id="algoritma-id3">Algoritma ID3<a class="headerlink" href="#algoritma-id3" title="Permanent link">&para;</a></h3>
+<p>Algoritma ID3 merupakan algoritma yang dipergunakan untuk membangun sebuah decision tree atau pohon keputusan. Decision tree menggunakan struktur hierarki untuk pembelajaran supervised. Proses dari decision tree dimulai dari root node hingga leaf node yang dilakukan secara rekursif. Dimana setiap percabangan menyatakan suatu kondisi yang harus  dipenuhi dan pada setiap ujung pohon menyatakan kelas dari suatu data.</p>
+<h3 id="langkah-langkah-konstruksi-pohon-keputusan-dengan-algoritma-id3">Langkah-Langkah Konstruksi Pohon Keputusan dengan Algoritma ID3<a class="headerlink" href="#langkah-langkah-konstruksi-pohon-keputusan-dengan-algoritma-id3" title="Permanent link">&para;</a></h3>
+<p><strong>Langkah 1 :</strong> Pohon dimulai dengan sebuah simpul yang mereperesentasikan sampel data pelatihan yaitu dengan membuat simpul akar.</p>
+<p><strong>Langkah 2 :</strong> Jika semua sampel berada dalam kelas yang sama, maka simpul ini menjadi daun dan dilabeli menjadi kelas. Jika tidak, information gain akan digunakan untuk memilih atribut terbaik dalam memisahkan data sampel menjadi kelas-kelas individu.</p>
+<p><strong>Langkah 3 :</strong> Cabang akan dibuat untuk setiap nilai pada atribut dan data sampel akan dipartisi lagi.</p>
+<p><strong>Langkah 4 :</strong> Algoritma ini menggunakan proses rekursif untuk membentuk pohon keputusan pada setiap data partisi. Jika sebuah atribut sduah digunakan disebuah simpul, maka atribut ini tidak akan digunakan lagi di simpul anak-anaknya.</p>
+<p><strong>Langkah 5 :</strong> Proses ini berhenti jika dicapai kondisi seperti berikut :</p>
+<p>– Semua sampel pada simpul berada di dalam satu kelas</p>
+<p>– Tidak ada atribut lainnya yang dapat digunakan untuk mempartisi sampel lebih lanjut. Dalam hal ini akan diterapkan suara terbanyak. Ini berarti mengubah sebuah simpul menjadi daun dan melabelinya dnegan kelas pada suara terbanyak.</p>
+<h3 id="entropy-information-gain">Entropy &amp; Information Gain<a class="headerlink" href="#entropy-information-gain" title="Permanent link">&para;</a></h3>
+<p>Algoritma pada metode ini menggunakan konsep dari entropi. Konsep Entropi yang digunakan untuk mengukur “seberapa informatifnya” sebuah node (yang biasanya disebut seberapa baiknya).</p>
+<p>​   Entropi(S) = 0, jika semua contoh pada S berada dalam kelas yang sama.</p>
+<p>​   Entropi(S) = 1, jika jumlah contoh positif dan jumlah contoh negatif dalam S adalah sama.
+​    0 &lt; Entropi(S) &lt; 1, jika jumlah contoh positif dan negatif dalam S tidak sama.</p>
+<p><img alt="" src="../assets/images/entropy.png" /></p>
+<p>Dimana:
+ • <em>S</em> adalah himpunan (dataset) kasus
+ • <em>k</em> adalah banyaknya partisi <em>S</em>
+ • pj adalah probabilitas yang di dapat dari Sum(Ya) dibagi Total Kasus.</p>
+<p>Setelah mendapat nilai entropi, pemilihan atribut dilakukan dengan nilai information gain terbesar.</p>
+<p><img alt="" src="../assets/images/gain-decision-tree.jpg" /></p>
+<p>Dimana:
+ S = ruang (data) sample yang digunakan untuk training.
+ A = atribut.
+ |Si| = jumlah sample untuk nilai V.
+ |S| = jumlah seluruh sample data.
+ Entropi(Si) = entropy untuk sample-sample yang memiliki nilai <em>i</em></p>
+<h3 id="algoritma-c45">Algoritma  C4.5<a class="headerlink" href="#algoritma-c45" title="Permanent link">&para;</a></h3>
+<p>Algoritma C4.5 adalah pengembangan dari algoritma ID3. Oleh karena pengembangan tersebut, algoritma C4.5 mempunyai prinsip dasar kerja yang sama dengan algoritma ID3. Perbedaan utama C4.5 dari ID3 adalah: 
+- C4.5 dapat menangani atribut kontinyu dan diskrit. </p>
+<ul>
+<li>
+<p>C4.5 dapat menangani training data dengan missing value. </p>
+</li>
+<li>
+<p>Hasil pohon keputusan C4.5 akan dipangkas setelah dibentuk. </p>
+</li>
+<li>
+<p>Pemilihan atribut yang dilakukan dengan menggunakan Gain Ratio. </p>
+</li>
+</ul>
+<p>Information gain pada ID3 lebih mengutamakan pengujian yang menghasilkan banyak keluaran. 
+  Karena itu algoritma C4.5 yang merupakan suksesor dari ID3 menggunakan gain ratio untuk memperbaiki information gain, dengan rumus gain ratio:</p>
+<p><img alt="" src="../assets/images/gain-ratio.jpg" /></p>
+<p>Dimana:
+  a = atribut.
+  gain(a) = information gain pada atribut a
+  Split(a) = split information pada atribut a</p>
+<p>Atribut dengan nilai Gain Ratio tertinggi dipilih sebagai atribut test untuk simpul. Dengan gain adalah information gain. Pendekatan ini menerapkan normalisasi pada information gain dengan menggunakan apa yang disebut sebagai split information. SplitInfo menyatakan entropy atau informasi potensial dengan rumus:</p>
+<p><img alt="" src="../assets/images/split-info.jpg" /></p>
+<p>Dimana:</p>
+<p>S = ruang (data) sample yang digunakan untuk training.</p>
+<p>A = atribut.</p>
+<p>Si = jumlah sample untuk atribut i </p>
+<p>Pada saat pembangunan pohon keputusan, banyaknya cabang mungkin mencerminkan adanya noise atau outlier pada training data. Pemangkasan pohon dapat dilakukan untuk mengenali dan menghapus cabang-cabang tersebut. Pohon yang dipangkas akan menjadi lebih kecil dan lebih mudah dipahami. Pohon semacam itu biasanya juga menjadi lebih cepat dan lebih baik dalam melakukan klasifikasi. </p>
+<p>Ada dua metode dalam melakukan pemangkasan dalam pohon keputusan, yaitu : 
+a)  Prepruning yaitu menghentikan pembangunan suatu subtree lebih awal, yaitu dengan memutuskan untuk tidak lebih jauh mempartisi data training. Pada pendekatan prepruning, sebuah pohon dipangkas dengan cara menghentikan pembangunannya jika partisi yang akan dibuat dianggap tidak signifikan. </p>
+<p><img alt="" src="../assets/images/split-info.jpg" /></p>
+<p>Dimana: 
+r = nilai perbandingan error rate 
+z = pessimistic error rate 
+n = total sample</p>
+<p>b)  Postpruning yaitu menyederhanakan pohon dengan cara membuang beberapa cabang subtree setelah pohon selesai dibangun. Metode postpruning ini merupakan metode standard untuk algoritma C4.5.</p>
+<p>Gambar pohon keputusan sebelum dan sesudah dipangkas</p>
+<p><img alt="" src="../assets/images/pruning_pohon.jpg" /></p>
+<p>Pemangkasan pohon juga dapat digunakan untuk mengatasi overfitting. Overfitting terjadi karena ada noise data training, yaitu data yang tidak relevan sehingga mengakibatkan pohon memiliki subtree yang panjang dan tidak seimbang. Misal internal node memiliki kelas YA = 5 dan TIDAK = 1. Data yang berada pada kelas TIDAK merupakan noise, sehingga apabila data tersebut diolah akan menghasilkan pohon dengan subtree yang panjang. Overfitting juga dapat terjadi karena data training yang sedikit.</p>
+<h3 id="implemetasi-program-menggunakan-data-diabetes">Implemetasi Program menggunakan data diabetes<a class="headerlink" href="#implemetasi-program-menggunakan-data-diabetes" title="Permanent link">&para;</a></h3>
+<p>Import package yang akan digunakan seperti pandas, numpy, Scikit learn, graphviz dan pydotplus</p>
+<pre class="codehilite"><code class="language-python">import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+from sklearn.externals.six import StringIO
+from IPython.display import Image
+from sklearn.tree import export_graphviz
+import pydotplus</code></pre>
+
+<p>Load data diabetes(antara program  dan file diabetes harus satu folder)</p>
+<pre class="codehilite"><code class="language-python">col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
+# load dataset
+pima = pd.read_csv("diabetes1.csv", header=None, names=col_names)</code></pre>
+
+<p>Script dibawah ini digunakan untuk pembagian fitur. Variabel x digunakan untuk fitur dan variabel y digunakan untuk  target</p>
+<pre class="codehilite"><code class="language-python">feature_cols = ['pregnant', 'insulin', 'bmi', 'age','glucose','bp','pedigree']
+X = pima[feature_cols] # fitur
+y = pima.label # target</code></pre>
+
+<p>Selanjutnya split data menjadi 2 untuk data tes dan data train</p>
+<pre class="codehilite"><code class="language-python">#split data : 30% data test, 70% data train
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)</code></pre>
+
+<p>Membuat model pohon keputusan.</p>
+<pre class="codehilite"><code class="language-python">clf = DecisionTreeClassifier(criterion="entropy", max_depth=3)
+
+# untuk train pohon keputusan
+clf = clf.fit(X_train,y_train)
+
+#untuk prediksi data yg diuji
+y_pred = clf.predict(X_test)
+
+#menampilkan akurasi
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+
+</code></pre>
+
+<p>Visualisasi pohon keputusan menggunakan script dibawah ini</p>
+<pre class="codehilite"><code class="language-python">dot_data = StringIO()
+export_graphviz(clf, out_file=dot_data,
+                filled=True, rounded=True,
+                special_characters=True, feature_names = feature_cols,class_names=['0','1'])
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+graph.write_png('diabetes.png')
+Image(graph.create_png())</code></pre>
+
+<p>Referensi :</p>
+<p><a href="https://medium.com/machine-learning-101/chapter-3-decision-trees-theory-e7398adac567">https://medium.com/machine-learning-101/chapter-3-decision-trees-theory-e7398adac567</a></p>
+<p><a href="http://demo.pohonkeputusan.com/tugas-akhir/admin/media.php?module=lain-lain&amp;act=tentang_pohon_keputusan&amp;i=1">http://demo.pohonkeputusan.com/tugas-akhir/admin/media.php?module=lain-lain&amp;act=tentang_pohon_keputusan&amp;i=1</a></p>
+<p><a href="https://informatikalogi.com/algoritma-id3/">https://informatikalogi.com/algoritma-id3/</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Materi1-KNN" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Materi1-KNN
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2019 Martin Donath
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8c0d971c.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
